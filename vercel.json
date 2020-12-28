@@ -1,0 +1,25 @@
+{
+  "name": "moviese-api",
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.js"
+    }
+  ],
+  "env": {
+    "DB_USER": "@moviese-db-user",
+    "DB_PASSWORD": "@moviese-db-password",
+    "DB_HOST": "@moviese-db-host",
+    "DB_NAME": "@moviese-db-name",
+    "AUTH_JWT_SECRET": "@moviese-auth-jwt-secret",
+    "PUBLIC_API_KEY_TOKEN": "@moviese-public-api-key-token",
+    "ADMIN_API_KEY_TOKEN" : "@moviese-admin-api-key-token"
+  }
+}
